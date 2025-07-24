@@ -3,12 +3,12 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
-const sections = ['hero', 'services', 'about', 'contact']
+const sections = ['services', 'about', 'contact']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [active, setActive] = useState('hero')
+  const [active, setActive] = useState('services')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,22 +36,33 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <a href="#hero" className="font-semibold text-lg text-gray-800">Adam Boettiger</a>
 
-        <div className="hidden md:flex space-x-6 text-gray-700">
+        {/* Centered Navigation */}
+        <div className="hidden md:flex space-x-8 text-gray-700 absolute left-1/2 transform -translate-x-1/2">
           {sections.map(id => (
             <a
               key={id}
               href={`#${id}`}
-              className={`hover:underline ${active === id ? 'underline' : ''}`}
+              className={`hover:underline font-medium ${active === id ? 'underline' : ''}`}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
           ))}
         </div>
 
-        <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-800">
-            {menuOpen ? <X /> : <Menu />}
-          </button>
+        {/* CTA Button / Mobile Menu */}
+        <div className="flex items-center">
+          <a 
+            href="#contact" 
+            className="hidden md:inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-300"
+          >
+            Get Started
+          </a>
+          
+          <div className="md:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-800">
+              {menuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </div>
 

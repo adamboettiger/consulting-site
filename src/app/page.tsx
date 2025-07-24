@@ -31,9 +31,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="min-h-screen bg-gray-50 px-6 py-20">
+      <section id="services" className="min-h-screen bg-slate-100 px-6 py-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6">Services</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-gray-900">Services</h2>
           <ul className="space-y-4 text-lg text-gray-700">
             <li>✓ GTM Strategy & Positioning</li>
             <li>✓ Demand Generation & Growth</li>
@@ -43,25 +43,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="min-h-screen bg-white px-6 py-20">
+      <section id="about" className="min-h-screen bg-blue-50 px-6 py-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6">About</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-gray-900">About</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            With 30 years of experience across agency, client-side, and consulting roles, I’ve helped SaaS startups and B2B companies achieve breakthrough growth. I work with founders, CEOs, and venture-backed teams to build scalable marketing engines with clear metrics and repeatable results.
+            With 30 years of experience across agency, client-side, and consulting roles, I&apos;ve helped SaaS startups and B2B companies achieve breakthrough growth. I work with founders, CEOs, and venture-backed teams to build scalable marketing engines with clear metrics and repeatable results.
           </p>
         </div>
       </section>
 
-      <section id="contact" className="min-h-screen bg-gray-50 px-6 py-20">
+      <section id="contact" className="min-h-screen bg-gray-900 px-6 py-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6">Contact</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Let’s talk. Email me directly at{' '}
-            <a href="mailto:adam@adamboettiger.com" className="text-blue-600 underline">
+          <h2 className="text-3xl font-semibold mb-6 text-white">Contact</h2>
+          <p className="text-lg text-gray-300 mb-4">
+            Let&apos;s talk. Email me directly at{' '}
+            <a href="mailto:adam@adamboettiger.com" className="text-blue-400 underline hover:text-blue-300">
               adam@adamboettiger.com
             </a>{' '}
             or connect on{' '}
-            <a href="https://www.linkedin.com/in/adamboettiger/" target="_blank" className="text-blue-600 underline">
+            <a href="https://www.linkedin.com/in/adamboettiger/" target="_blank" className="text-blue-400 underline hover:text-blue-300">
               LinkedIn
             </a>.
           </p>
