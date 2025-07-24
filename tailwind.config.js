@@ -117,7 +117,9 @@ module.exports = {
     'mb-3',
     'max-w-3xl',
     'bg-white/80',
+    'py-1',
     'py-4',
+    'pt-16',
   ],
   theme: {
     extend: {},

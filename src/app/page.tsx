@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-center bg-no-repeat pt-20" style={{backgroundImage: 'url(/hero.jpeg)'}}>
+      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-center bg-no-repeat pt-16" style={{backgroundImage: 'url(/hero.jpeg)'}}>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         

@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/80 shadow-md' : 'backdrop-blur-md bg-white/80'}`}>
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-4 py-1 flex justify-between items-center">
         <a href="#hero" className="font-semibold text-lg text-gray-800">Adam Boettiger</a>
 
         {/* Centered Navigation */}
