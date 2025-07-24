@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-center bg-no-repeat pt-16" style={{backgroundImage: 'url(/hero.jpeg)'}}>
+      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-top bg-no-repeat pt-16" style={{backgroundImage: 'url(/hero.jpeg)'}}>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
@@ -31,25 +31,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="h-screen bg-white flex items-center justify-center px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">Services</h2>
-          <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">✓ GTM Strategy & Positioning</h3>
-              <p className="text-gray-700">Market positioning and go-to-market strategy development</p>
+      <section id="services" className="h-screen bg-gray-100 flex items-center justify-center">
+        <div className="w-full h-full max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 h-full">
+            {/* Top Left */}
+            <div className="bg-white flex items-center justify-center p-12 border-r-[25px] border-b-[25px] border-gray-100">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">GTM Strategy</h3>
+                <p className="text-lg text-gray-700">Market positioning and go-to-market strategy development</p>
+              </div>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">✓ Demand Generation & Growth</h3>
-              <p className="text-gray-700">Scalable demand generation and growth marketing</p>
+            
+            {/* Top Right */}
+            <div className="bg-white flex items-center justify-center p-12 border-l-[25px] border-b-[25px] border-gray-100">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Demand Generation</h3>
+                <p className="text-lg text-gray-700">Scalable demand generation and growth marketing</p>
+              </div>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">✓ ABM, Paid Media & Automation</h3>
-              <p className="text-gray-700">Account-based marketing and marketing automation</p>
+            
+            {/* Bottom Left */}
+            <div className="bg-white flex items-center justify-center p-12 border-r-[25px] border-t-[25px] border-gray-100">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">ABM & Automation</h3>
+                <p className="text-lg text-gray-700">Account-based marketing and marketing automation</p>
+              </div>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">✓ Fractional CMO Advisory</h3>
-              <p className="text-gray-700">Strategic marketing leadership and advisory services</p>
+            
+            {/* Bottom Right */}
+            <div className="bg-white flex items-center justify-center p-12 border-l-[25px] border-t-[25px] border-gray-100">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Fractional CMO</h3>
+                <p className="text-lg text-gray-700">Strategic marketing leadership and advisory services</p>
+              </div>
             </div>
           </div>
         </div>

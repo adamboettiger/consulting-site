@@ -42,7 +42,7 @@ export default function Navbar() {
             <a
               key={id}
               href={`#${id}`}
-              className={`hover:underline font-medium ${active === id ? 'underline' : ''}`}
+              className={`font-bold hover:text-gray-900 transition-colors ${active === id ? 'text-gray-900' : ''}`}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
