@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base global styles */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   @apply text-gray-900 bg-white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  @apply text-blue-600 hover:underline;
+  @apply text-blue-600 underline;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  @apply no-underline text-blue-800;
 }

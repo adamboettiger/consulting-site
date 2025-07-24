@@ -1,69 +1,50 @@
-'use client'
-
-import Image from 'next/image'
-
-export default function HomePage() {
+// app/page.tsx
+export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-[600px] w-full overflow-hidden">
-        <Image
-          src="/hero.jpeg"
-          alt="Hero"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center px-6">
-          <div className="text-center text-white space-y-4 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold">
-              Fractional CMO for B2B Startups & Growth-Stage Companies
-            </h1>
-            <p className="text-lg md:text-xl">
-              I help venture-backed teams build scalable marketing systems that generate pipeline, accelerate ARR, and attract the next round of funding.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block bg-white text-black font-semibold px-6 py-2 rounded hover:bg-gray-200 transition"
-            >
-              Book a Discovery Call
-            </a>
-          </div>
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-white px-6">
+        <div className="max-w-3xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Adam Boettiger</h1>
+          <p className="text-lg md:text-xl text-gray-700">
+            Fractional CMO | Helping startups scale marketing for ARR and funding.
+          </p>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="px-6 py-12 max-w-4xl mx-auto space-y-6">
-        <h2 className="text-2xl font-bold">About</h2>
-        <p>
-          With 30 years of marketing experience — including CMO and VP roles across SaaS, AI, and venture-backed startups — I help founders and CEOs bridge the gap between growth strategy and execution.
-        </p>
-        <p>
-          I've led teams on both agency and client sides, scaled campaigns that delivered 30–127% lift in lead generation, and know what it takes to align sales and marketing in fast-moving environments.
-        </p>
+      <section id="services" className="min-h-screen bg-gray-50 px-6 py-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6">Services</h2>
+          <ul className="space-y-4 text-lg text-gray-700">
+            <li>✓ GTM Strategy & Positioning</li>
+            <li>✓ Demand Generation & Growth</li>
+            <li>✓ ABM, Paid Media & Automation</li>
+            <li>✓ Fractional CMO Advisory</li>
+          </ul>
+        </div>
+      </section>
 
-        <h2 className="text-2xl font-bold mt-12">Services</h2>
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-semibold">Fractional CMO Leadership</h3>
-            <p>Strategic oversight of marketing tied to revenue and board-level metrics.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold">Go-to-Market Strategy</h3>
-            <p>Launch planning with ICP, positioning, and sequencing for ARR growth.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold">Demand Gen & ABM Campaigns</h3>
-            <p>AI-powered campaigns using HubSpot, LinkedIn, and account targeting.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold">Founder GTM Coaching</h3>
-            <p>Helping founders craft and test their first scalable motion.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold">AI-Enabled Marketing Ops</h3>
-            <p>Helping companies leverage AI tools across the marketing tech stack.</p>
-          </div>
+      <section id="about" className="min-h-screen bg-white px-6 py-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6">About</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            With 30 years of experience across agency, client-side, and consulting roles, I’ve helped SaaS startups and B2B companies achieve breakthrough growth. I work with founders, CEOs, and venture-backed teams to build scalable marketing engines with clear metrics and repeatable results.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" className="min-h-screen bg-gray-50 px-6 py-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6">Contact</h2>
+          <p className="text-lg text-gray-700 mb-4">
+            Let’s talk. Email me directly at{' '}
+            <a href="mailto:adam@adamboettiger.com" className="text-blue-600 underline">
+              adam@adamboettiger.com
+            </a>{' '}
+            or connect on{' '}
+            <a href="https://www.linkedin.com/in/adamboettiger/" target="_blank" className="text-blue-600 underline">
+              LinkedIn
+            </a>.
+          </p>
         </div>
       </section>
     </>
