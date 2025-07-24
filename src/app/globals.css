@@ -2,16 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font & global polish */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply bg-white text-gray-900 antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  @apply text-gray-900 bg-white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-h1, h2, h3, h4 {
-  @apply font-semibold tracking-tight;
+a {
+  @apply text-blue-600 hover:underline;
 }
