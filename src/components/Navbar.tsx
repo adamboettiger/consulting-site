@@ -6,13 +6,11 @@ import { Menu, X } from 'lucide-react'
 const sections = ['services', 'about', 'contact']
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [active, setActive] = useState('services')
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
 
       const offsets = sections.map(id => {
         const el = document.getElementById(id)
@@ -32,8 +30,8 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/80 shadow-md' : 'backdrop-blur-md bg-white/80'}`}>
-      <div className="max-w-6xl mx-auto px-4 py-1 flex justify-between items-center">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/80 shadow-md">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <a href="#hero" className="font-semibold text-lg text-gray-800">Adam Boettiger</a>
 
         {/* Centered Navigation */}

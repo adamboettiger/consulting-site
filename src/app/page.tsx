@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-top bg-no-repeat pt-16" style={{backgroundImage: 'url(/hero.jpeg)'}}>
+      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-top bg-no-repeat pt-20" style={{backgroundImage: 'url(/hero.jpeg)'}}>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
@@ -31,39 +31,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="h-screen bg-gray-100 flex items-center justify-center">
-        <div className="w-full h-full max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 h-full">
-            {/* Top Left */}
-            <div className="bg-white flex items-center justify-center p-12 border-r-[25px] border-b-[25px] border-gray-100">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">GTM Strategy</h3>
-                <p className="text-lg text-gray-700">Market positioning and go-to-market strategy development</p>
-              </div>
+      <section id="services" className="h-screen bg-gray-200">
+        <div className="w-full h-full grid grid-cols-2">
+          {/* Top Left */}
+          <div className="bg-white flex items-center justify-center p-12 border-r-2 border-b-2 border-gray-200">
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">GTM Strategy</h3>
+              <p className="text-lg text-gray-700">Market positioning and go-to-market strategy development</p>
             </div>
-            
-            {/* Top Right */}
-            <div className="bg-white flex items-center justify-center p-12 border-l-[25px] border-b-[25px] border-gray-100">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Demand Generation</h3>
-                <p className="text-lg text-gray-700">Scalable demand generation and growth marketing</p>
-              </div>
+          </div>
+          
+          {/* Top Right */}
+          <div className="bg-white flex items-center justify-center p-12 border-l-2 border-b-2 border-gray-200">
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Demand Generation</h3>
+              <p className="text-lg text-gray-700">Scalable demand generation and growth marketing</p>
             </div>
-            
-            {/* Bottom Left */}
-            <div className="bg-white flex items-center justify-center p-12 border-r-[25px] border-t-[25px] border-gray-100">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">ABM & Automation</h3>
-                <p className="text-lg text-gray-700">Account-based marketing and marketing automation</p>
-              </div>
+          </div>
+          
+          {/* Bottom Left */}
+          <div className="bg-white flex items-center justify-center p-12 border-r-2 border-t-2 border-gray-200">
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">ABM & Automation</h3>
+              <p className="text-lg text-gray-700">Account-based marketing and marketing automation</p>
             </div>
-            
-            {/* Bottom Right */}
-            <div className="bg-white flex items-center justify-center p-12 border-l-[25px] border-t-[25px] border-gray-100">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Fractional CMO</h3>
-                <p className="text-lg text-gray-700">Strategic marketing leadership and advisory services</p>
-              </div>
+          </div>
+          
+          {/* Bottom Right */}
+          <div className="bg-white flex items-center justify-center p-12 border-l-2 border-t-2 border-gray-200">
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Fractional CMO</h3>
+              <p className="text-lg text-gray-700">Strategic marketing leadership and advisory services</p>
             </div>
           </div>
         </div>
