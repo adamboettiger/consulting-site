@@ -1,103 +1,99 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <main className="bg-white text-gray-900">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-white to-gray-50 py-24 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Fractional CMO for B2B Startups & Growth-Stage Companies
+        </h1>
+        <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-600">
+          I help venture-backed teams build scalable marketing systems that generate pipeline,
+          accelerate ARR, and attract the next round of funding.
+        </p>
+        <div className="mt-6">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Book a Discovery Call
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 px-6 bg-white text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-semibold">About</h2>
+          <p className="mt-6 text-gray-700 text-lg">
+            With 30 years of marketing experience — including CMO and VP roles across SaaS, AI,
+            and venture-backed startups — I help founders and CEOs bridge the gap between growth
+            strategy and execution.
+          </p>
+          <p className="mt-4 text-gray-700 text-lg">
+            I've led teams on both agency and client sides, scaled campaigns that delivered 30–127% lift
+            in lead generation, and know what it takes to align sales and marketing in fast-moving environments.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-6 bg-gray-50" id="services">
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">Services</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div>
+            <h3 className="text-xl font-bold">Fractional CMO Leadership</h3>
+            <p className="mt-2 text-gray-600">
+              Strategic oversight of marketing tied to revenue and board-level metrics.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold">Go-to-Market Strategy</h3>
+            <p className="mt-2 text-gray-600">
+              Launch planning with ICP, positioning, and sequencing for ARR growth.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold">Demand Gen & ABM Campaigns</h3>
+            <p className="mt-2 text-gray-600">
+              AI-powered campaigns using HubSpot, LinkedIn, and account targeting.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold">Founder GTM Coaching</h3>
+            <p className="mt-2 text-gray-600">
+              Helping founders craft and test their first scalable motion.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold">AI-Enabled Marketing Ops</h3>
+            <p className="mt-2 text-gray-600">
+              Streamlining your stack and playbooks with AI tools for efficiency.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 bg-white text-center" id="contact">
+        <h2 className="text-3xl font-semibold">Ready to accelerate growth?</h2>
+        <p className="mt-4 text-gray-600">
+          Let’s talk about building a marketing engine that delivers real pipeline.
+        </p>
+        <div className="mt-6 flex justify-center gap-4 flex-wrap">
+          <a
+            href="https://calendly.com/yourname"
+            className="bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700"
+          >
+            Schedule a Call
+          </a>
+          <a
+            href="mailto:you@yourdomain.com"
+            className="text-blue-600 font-medium underline hover:text-blue-800"
+          >
+            Email Me
+          </a>
+        </div>
+      </section>
+    </main>
   );
 }
