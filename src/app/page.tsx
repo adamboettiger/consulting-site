@@ -2,14 +2,10 @@
 import { useEffect, useState } from 'react';
 
 export default function HomePage() {
-  return (
-    <>
-      {/* Hero */}
-     export default function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100); // Simulates lazy load delay
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,10 +36,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ...rest of your sections stay the same... */}
-    </>
-  );
-}
       {/* About */}
       <section className="py-20 px-6 bg-white text-center" id="about">
         <div className="max-w-3xl mx-auto">
@@ -64,31 +56,31 @@ export default function HomePage() {
           <div>
             <h3 className="text-xl font-bold">Fractional CMO Leadership</h3>
             <p className="mt-2 text-gray-600">
-              {"Strategic oversight of marketing tied to revenue and board-level metrics."}
+              Strategic oversight of marketing tied to revenue and board-level metrics.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-bold">Go-to-Market Strategy</h3>
             <p className="mt-2 text-gray-600">
-              {"Launch planning with ICP, positioning, and sequencing for ARR growth."}
+              Launch planning with ICP, positioning, and sequencing for ARR growth.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-bold">Demand Gen & ABM Campaigns</h3>
             <p className="mt-2 text-gray-600">
-              {"AI-powered campaigns using HubSpot, LinkedIn, and account targeting."}
+              AI-powered campaigns using HubSpot, LinkedIn, and account targeting.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-bold">Founder GTM Coaching</h3>
             <p className="mt-2 text-gray-600">
-              {"Helping founders craft and test their first scalable motion."}
+              Helping founders craft and test their first scalable motion.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-bold">AI-Enabled Marketing Ops</h3>
             <p className="mt-2 text-gray-600">
-              {"Streamlining your stack and playbooks with AI tools for efficiency."}
+              Streamlining your stack and playbooks with AI tools for efficiency.
             </p>
           </div>
         </div>
