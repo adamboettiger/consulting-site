@@ -2,12 +2,32 @@
 export default function Home() {
   return (
     <>
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-white px-6">
-        <div className="max-w-3xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Adam Boettiger</h1>
-          <p className="text-lg md:text-xl text-gray-700">
+      <section id="hero" className="min-h-screen flex items-center justify-center relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/hero.jpeg)'}}>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        {/* Content */}
+        <div className="max-w-4xl text-center px-6 relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
+            Adam Boettiger
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
             Fractional CMO | Helping startups scale marketing for ARR and funding.
           </p>
+          <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+            <a 
+              href="#contact" 
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg"
+            >
+              Let&apos;s Talk
+            </a>
+            <a 
+              href="#services" 
+              className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              View Services
+            </a>
+          </div>
         </div>
       </section>
 

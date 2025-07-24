@@ -16,7 +16,7 @@ This is a consulting website for Adam Boettiger (Fractional CMO) built with:
 **Tech Stack:**
 - Next.js 15.4.3 with App Router architecture
 - TypeScript with strict mode enabled
-- Tailwind CSS 4.x for styling
+- Tailwind CSS 3.4.17 for styling (downgraded from v4 for production compatibility)
 - Lucide React for icons
 - React 19.1.0
 
@@ -32,8 +32,9 @@ This is a consulting website for Adam Boettiger (Fractional CMO) built with:
 
 **Styling System:**
 - Global styles in `/src/app/globals.css` with Tailwind directives
-- PostCSS configuration uses `@tailwindcss/postcss` plugin (not the deprecated `tailwindcss` plugin)
+- PostCSS configuration uses standard `tailwindcss` plugin (v3 compatible)
 - Tailwind content paths configured for `/src/app/**/*.{js,ts,jsx,tsx}` and `/src/components/**/*.{js,ts,jsx,tsx}`
+- Includes safelist of essential classes to ensure production builds generate all necessary CSS
 
 **Page Structure:**
 The main page (`page.tsx`) is a single-page application with sections:
@@ -47,3 +48,15 @@ The main page (`page.tsx`) is a single-page application with sections:
 - Client components use `'use client'` directive for interactivity
 - Mobile-responsive design with responsive Tailwind classes
 - Smooth scrolling navigation between sections
+
+## Deployment & Caching
+
+**Vercel CDN Cache Busting:**
+When developing on production, Vercel's CDN may serve cached CSS files that don't reflect recent changes. If Tailwind styles aren't appearing:
+
+1. **Force new deployment**: Use `vercel deploy --prod` to create a new deployment with fresh CSS hashes
+2. **Check CSS filename**: Each deployment generates CSS files with unique hashes (e.g., `ef46db3751d8e999.css`)
+3. **Verify CSS content**: Empty CSS files indicate caching issues - new deployments should have full Tailwind CSS
+4. **Alternative**: Push an empty commit (`git commit --allow-empty -m "Cache bust"`) to trigger auto-deployment
+
+The safelist in `tailwind.config.js` ensures all essential classes are always included in production builds.
