@@ -71,7 +71,7 @@ export default function Home() {
           alt="Hero background"
           fill
           priority
-          className="object-cover object-top"
+          className="object-cover object-center"
           sizes="100vw"
           quality={90}
         />
@@ -106,41 +106,57 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="min-h-screen bg-gray-200 py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900">Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Service Cards */}
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">GTM Strategy</h3>
-                <p className="text-lg text-gray-700">Market positioning and go-to-market strategy development</p>
+      {/* White line separator */}
+      <div className="w-full max-w-6xl mx-auto px-6">
+        <div className="h-px bg-white opacity-50 my-12"></div>
+      </div>
+
+      <section id="services" className="min-h-screen flex items-center justify-center py-20">
+        <div className="max-w-6xl w-full mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 p-6">
+            {/* CMO on Demand */}
+            <div className="relative w-full pt-[100%] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
+                style={{backgroundImage: "url('/images/cmo-on-demand.jpg')"}}>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
+                <h2 className="text-2xl font-semibold tracking-tight">CMO on Demand</h2>
+                <p className="text-sm mt-2 font-light">Executive strategy without full-time cost.</p>
               </div>
             </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Demand Generation</h3>
-                <p className="text-lg text-gray-700">Scalable demand generation and growth marketing</p>
+
+            {/* AI Marketing Accelerator */}
+            <div className="relative w-full pt-[100%] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
+                style={{backgroundImage: "url('/images/ai-accelerator.jpg')"}}>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
+                <h2 className="text-2xl font-semibold tracking-tight">AI Marketing Accelerator</h2>
+                <p className="text-sm mt-2 font-light">Train your team to move faster with AI.</p>
               </div>
             </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">ABM & Automation</h3>
-                <p className="text-lg text-gray-700">Account-based marketing and marketing automation</p>
+
+            {/* CMO Whisperer */}
+            <div className="relative w-full pt-[100%] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
+                style={{backgroundImage: "url('/images/cmo-whisperer.jpg')"}}>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
+                <h2 className="text-2xl font-semibold tracking-tight">CMO Whisperer</h2>
+                <p className="text-sm mt-2 font-light">Executive coaching for marketing clarity.</p>
               </div>
             </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
-              <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Fractional CMO</h3>
-                <p className="text-lg text-gray-700">Strategic marketing leadership and advisory services</p>
+
+            {/* Marketing as a Service */}
+            <div className="relative w-full pt-[100%] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
+                style={{backgroundImage: "url('/images/marketing-service.jpg')"}}>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
+                <h2 className="text-2xl font-semibold tracking-tight">Marketing-as-a-Service</h2>
+                <p className="text-sm mt-2 font-light">Your flexible, on-call marketing team.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* White line separator */}
+      <div className="w-full max-w-6xl mx-auto px-6">
+        <div className="h-px bg-white opacity-50 my-12"></div>
+      </div>
 
       <section id="about" className="min-h-screen bg-blue-600 flex items-center justify-center px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
