@@ -107,8 +107,8 @@ export default function Home() {
       </section>
 
       {/* White line separator */}
-      <div className="w-full bg-white">
-        <div className="h-px bg-white opacity-50 max-w-[90%] mx-auto"></div>
+      <div className="w-full bg-transparent">
+        <div className="h-[1px] bg-white/20 max-w-[90%] mx-auto my-16"></div>
       </div>
 
       <section id="services" className="w-full min-h-screen flex items-center justify-center py-20 bg-black">
@@ -154,8 +154,8 @@ export default function Home() {
       </section>
 
       {/* White line separator */}
-      <div className="w-full bg-white">
-        <div className="h-px bg-white opacity-50 max-w-[90%] mx-auto"></div>
+      <div className="w-full bg-transparent">
+        <div className="h-[1px] bg-white/20 max-w-[90%] mx-auto my-16"></div>
       </div>
 
       <section id="about" className="min-h-screen bg-blue-600 flex items-center justify-center px-6 py-20">
