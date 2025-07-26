@@ -107,13 +107,13 @@ export default function Home() {
       </section>
 
       {/* White line separator */}
-      <div className="w-full max-w-6xl mx-auto px-6">
-        <div className="h-px bg-white opacity-50 my-12"></div>
+      <div className="w-full bg-white">
+        <div className="h-px bg-white opacity-50 max-w-[90%] mx-auto"></div>
       </div>
 
-      <section id="services" className="min-h-screen flex items-center justify-center py-20">
-        <div className="max-w-6xl w-full mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 p-6">
+      <section id="services" className="w-full min-h-screen flex items-center justify-center py-20 bg-black">
+        <div className="w-full max-w-[90%] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
             {/* CMO on Demand */}
             <div className="relative w-full pt-[100%] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
                 style={{backgroundImage: "url('/images/cmo-on-demand.jpg')"}}>
@@ -154,8 +154,8 @@ export default function Home() {
       </section>
 
       {/* White line separator */}
-      <div className="w-full max-w-6xl mx-auto px-6">
-        <div className="h-px bg-white opacity-50 my-12"></div>
+      <div className="w-full bg-white">
+        <div className="h-px bg-white opacity-50 max-w-[90%] mx-auto"></div>
       </div>
 
       <section id="about" className="min-h-screen bg-blue-600 flex items-center justify-center px-6 py-20">
