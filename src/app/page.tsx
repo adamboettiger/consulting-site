@@ -1,8 +1,81 @@
 // app/page.tsx
+import Image from 'next/image'
+import Script from 'next/script'
+
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Adam Boettiger - Fractional CMO',
+    description: 'Strategic marketing leadership and advisory services helping startups scale marketing for ARR and funding.',
+    url: 'https://adamboettiger.com',
+    founder: {
+      '@type': 'Person',
+      name: 'Adam Boettiger',
+      jobTitle: 'Fractional CMO',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Marketing Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'GTM Strategy',
+            description: 'Market positioning and go-to-market strategy development'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Demand Generation',
+            description: 'Scalable demand generation and growth marketing'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'ABM & Automation',
+            description: 'Account-based marketing and marketing automation'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Fractional CMO',
+            description: 'Strategic marketing leadership and advisory services'
+          }
+        }
+      ]
+    }
+  }
+
   return (
     <>
-      <section id="hero" className="h-screen flex items-center justify-center relative bg-cover bg-top bg-no-repeat pt-20" style={{backgroundImage: 'url(/hero.jpeg)'}}>
+      <Script id="json-ld" type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+      </Script>
+
+      <section id="hero" className="min-h-screen flex items-center justify-center relative -mt-20">
+        {/* Hero background with Next.js Image optimization */}
+        <Image
+          src="/hero.jpeg"
+          alt="Hero background"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+          quality={90}
+        />
+        
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
@@ -17,13 +90,15 @@ export default function Home() {
           <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
             <a 
               href="#contact" 
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg"
+              className="inline-block bg-blue-600 hover:bg-blue-500 text-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-300 shadow-lg no-underline"
+              aria-label="Contact Adam Boettiger"
             >
               Let&apos;s Talk
             </a>
             <a 
               href="#services" 
-              className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="inline-block border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 no-underline"
+              aria-label="View Services Offered"
             >
               View Services
             </a>
@@ -31,43 +106,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="h-screen bg-gray-200">
-        <div className="w-full h-full grid grid-cols-2">
-          {/* Top Left */}
-          <div className="bg-white flex items-center justify-center p-12 border-r-2 border-b-2 border-gray-200">
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">GTM Strategy</h3>
-              <p className="text-lg text-gray-700">Market positioning and go-to-market strategy development</p>
+      <section id="services" className="min-h-screen bg-gray-200 py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900">Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Service Cards */}
+            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">GTM Strategy</h3>
+                <p className="text-lg text-gray-700">Market positioning and go-to-market strategy development</p>
+              </div>
             </div>
-          </div>
-          
-          {/* Top Right */}
-          <div className="bg-white flex items-center justify-center p-12 border-l-2 border-b-2 border-gray-200">
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Demand Generation</h3>
-              <p className="text-lg text-gray-700">Scalable demand generation and growth marketing</p>
+            
+            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Demand Generation</h3>
+                <p className="text-lg text-gray-700">Scalable demand generation and growth marketing</p>
+              </div>
             </div>
-          </div>
-          
-          {/* Bottom Left */}
-          <div className="bg-white flex items-center justify-center p-12 border-r-2 border-t-2 border-gray-200">
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">ABM & Automation</h3>
-              <p className="text-lg text-gray-700">Account-based marketing and marketing automation</p>
+            
+            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">ABM & Automation</h3>
+                <p className="text-lg text-gray-700">Account-based marketing and marketing automation</p>
+              </div>
             </div>
-          </div>
-          
-          {/* Bottom Right */}
-          <div className="bg-white flex items-center justify-center p-12 border-l-2 border-t-2 border-gray-200">
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Fractional CMO</h3>
-              <p className="text-lg text-gray-700">Strategic marketing leadership and advisory services</p>
+            
+            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Fractional CMO</h3>
+                <p className="text-lg text-gray-700">Strategic marketing leadership and advisory services</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="h-screen bg-blue-600 flex items-center justify-center px-6">
+      <section id="about" className="min-h-screen bg-blue-600 flex items-center justify-center px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">About</h2>
           <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
@@ -76,19 +151,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="h-screen bg-gray-900 flex items-center justify-center px-6">
+      <section id="contact" className="min-h-screen bg-gray-900 flex items-center justify-center px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Contact</h2>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Let&apos;s talk. Email me directly at{' '}
-            <a href="mailto:adam@adamboettiger.com" className="text-blue-400 underline hover:text-blue-300">
+            <a 
+              href="mailto:adam@adamboettiger.com" 
+              className="text-blue-400 hover:text-blue-300 no-underline"
+              aria-label="Send email to adam@adamboettiger.com"
+            >
               adam@adamboettiger.com
             </a>{' '}
-            or connect on{' '}
-            <a href="https://www.linkedin.com/in/adamboettiger/" target="_blank" className="text-blue-400 underline hover:text-blue-300">
-              LinkedIn
-            </a>.
+            or schedule a 15-minute video call,{' '}
+            <a 
+              href="https://calendly.com/adamboettiger/15" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 no-underline"
+              aria-label="Schedule a call on Calendly"
+            >
+              https://calendly.com/adamboettiger/15
+            </a>
           </p>
+          <div className="mt-8">
+            <a 
+              href="https://www.linkedin.com/in/adamboettiger/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-80 transition-opacity"
+              aria-label="Connect with Adam on LinkedIn"
+            >
+              <svg className="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
     </>
