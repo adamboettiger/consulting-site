@@ -108,14 +108,14 @@ export default function Home() {
 
       {/* White line separator */}
       <div className="w-full">
-        <div className="h-[0.5rem] bg-white/30 w-full"></div>
+        <div className="h-px bg-gray-200 w-full"></div>
       </div>
 
       <section id="services" className="w-full min-h-screen flex items-center justify-center py-20">
         <div className="w-full max-w-[90%] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[0.5rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-px bg-gray-200">
             {/* CMO on Demand */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center overflow-hidden"
+            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
                 style={{backgroundImage: "url('/images/cmo-on-demand.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">CMO on Demand</h2>
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
 
             {/* AI Marketing Accelerator */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center overflow-hidden"
+            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
                 style={{backgroundImage: "url('/images/ai-accelerator.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">AI Marketing Accelerator</h2>
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
 
             {/* CMO Whisperer */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center overflow-hidden"
+            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
                 style={{backgroundImage: "url('/images/cmo-whisperer.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">CMO Whisperer</h2>
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
 
             {/* Marketing as a Service */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center overflow-hidden"
+            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
                 style={{backgroundImage: "url('/images/marketing-service.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">Marketing-as-a-Service</h2>
@@ -155,7 +155,7 @@ export default function Home() {
 
       {/* White line separator */}
       <div className="w-full">
-        <div className="h-[0.5rem] bg-white/30 w-full"></div>
+        <div className="h-px bg-gray-200 w-full"></div>
       </div>
 
       <section id="about" className="min-h-screen bg-blue-600 flex items-center justify-center px-6 py-20">
