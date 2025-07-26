@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [handleScroll])
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/80 shadow-md" role="navigation">
+    <nav className="fixed top-0 w-full z-50 bg-black/5 backdrop-blur-sm" role="navigation">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <span 
           className="font-semibold text-lg text-gray-800 no-underline cursor-default"

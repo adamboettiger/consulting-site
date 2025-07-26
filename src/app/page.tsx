@@ -71,7 +71,7 @@ export default function Home() {
           alt="Hero background"
           fill
           priority
-          className="object-cover object-[center_35%]"
+          className="object-cover object-[center_15%]"
           sizes="100vw"
           quality={90}
         />
@@ -113,7 +113,7 @@ export default function Home() {
 
       <section id="services" className="w-full min-h-screen flex items-center justify-center py-20">
         <div className="w-full max-w-[90%] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[0.5rem]">
             {/* CMO on Demand */}
             <div className="relative w-full pt-[100%] bg-cover bg-center overflow-hidden"
                 style={{backgroundImage: "url('/images/cmo-on-demand.jpg')"}}>
