@@ -1,5 +1,6 @@
 // app/page.tsx
 import Image from 'next/image'
+import Link from 'next/link'
 import Script from 'next/script'
 
 export default function Home() {
@@ -64,20 +65,20 @@ export default function Home() {
         {JSON.stringify(jsonLd)}
       </Script>
 
-      <section id="hero" className="min-h-screen flex items-center justify-center relative -mt-20">
+      <section id="hero" className="h-[70vh] flex items-center justify-center relative -mt-20">
         {/* Hero background with Next.js Image optimization */}
         <Image
           src="/hero.jpeg"
           alt="Hero background"
           fill
           priority
-          className="object-cover object-[center_0%]"
+          className="object-cover"
           sizes="100vw"
           quality={90}
         />
-        
+
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         
         {/* Content */}
         <div className="max-w-4xl text-center px-6 relative z-10">
@@ -115,39 +116,75 @@ export default function Home() {
         <div className="w-full max-w-[90%] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-px bg-gray-200">
             {/* CMO on Demand */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
+            <Link href="/fractional-cmo" className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden no-underline"
                 style={{backgroundImage: "url('/images/cmo-on-demand.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">CMO on Demand</h2>
                 <p className="text-sm mt-2 font-light">Executive strategy without full-time cost.</p>
               </div>
-            </div>
+            </Link>
 
             {/* AI Marketing Accelerator */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
+            <Link href="/ai-marketing" className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden no-underline"
                 style={{backgroundImage: "url('/images/ai-accelerator.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">AI Marketing Accelerator</h2>
                 <p className="text-sm mt-2 font-light">Train your team to move faster with AI.</p>
               </div>
-            </div>
+            </Link>
 
             {/* CMO Whisperer */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
+            <Link href="/cmo-coaching" className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden no-underline"
                 style={{backgroundImage: "url('/images/cmo-whisperer.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">CMO Whisperer</h2>
                 <p className="text-sm mt-2 font-light">Executive coaching for marketing clarity.</p>
               </div>
-            </div>
+            </Link>
 
             {/* Marketing as a Service */}
-            <div className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden"
+            <Link href="/marketing-services" className="relative w-full pt-[100%] bg-cover bg-center bg-white overflow-hidden no-underline"
                 style={{backgroundImage: "url('/images/marketing-service.jpg')"}}>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/50 transition-all duration-300 hover:bg-black/40">
                 <h2 className="text-2xl font-semibold tracking-tight">Marketing-as-a-Service</h2>
                 <p className="text-sm mt-2 font-light">Your flexible, on-call marketing team.</p>
               </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* White line separator */}
+      <div className="w-full">
+        <div className="h-px bg-gray-200 w-full"></div>
+      </div>
+
+      <section id="results" className="min-h-screen bg-white flex items-center justify-center px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-gray-900 text-center">Results That Matter</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Metric 1 */}
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-4">150%</div>
+              <p className="text-lg text-gray-700">Average pipeline growth in first 6 months</p>
+            </div>
+
+            {/* Metric 2 */}
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-4">$50M+</div>
+              <p className="text-lg text-gray-700">In funding raised by clients</p>
+            </div>
+
+            {/* Metric 3 */}
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-4">25+</div>
+              <p className="text-lg text-gray-700">B2B startups scaled</p>
+            </div>
+
+            {/* Metric 4 */}
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-4">3-6mo</div>
+              <p className="text-lg text-gray-700">Average time to measurable results</p>
             </div>
           </div>
         </div>
