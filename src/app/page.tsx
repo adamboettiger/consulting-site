@@ -72,7 +72,7 @@ export default function Home() {
           alt="Hero background"
           fill
           priority
-          className="object-cover object-[center_20%]"
+          className="object-cover object-[center_-20%]"
           sizes="100vw"
           quality={90}
         />
@@ -81,10 +81,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         
         {/* Content */}
-        <div className="max-w-4xl text-center px-6 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
-            Adam Boettiger
-          </h1>
+        <div className="max-w-4xl text-center px-6 relative z-10 translate-y-[90%]">
           <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
             Fractional CMO | Helping startups scale marketing for ARR and funding.
           </p>
@@ -207,19 +204,22 @@ export default function Home() {
       <section id="contact" className="min-h-screen bg-gray-900 flex items-center justify-center px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Contact</h2>
+          <p className="text-xl md:text-2xl text-gray-300 mb-16 leading-relaxed">
+            Let&apos;s talk.
+          </p>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-            Let&apos;s talk. Email me directly at{' '}
-            <a 
-              href="mailto:adam@adamboettiger.com" 
+            Email me directly at{' '}
+            <a
+              href="mailto:adam@adamboettiger.com"
               className="text-blue-400 hover:text-blue-300 no-underline"
               aria-label="Send email to adam@adamboettiger.com"
             >
               adam@adamboettiger.com
             </a>{' '}
             or schedule a 15-minute video call,{' '}
-            <a 
-              href="https://calendly.com/adamboettiger/15" 
-              target="_blank" 
+            <a
+              href="https://calendly.com/adamboettiger/15"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 no-underline"
               aria-label="Schedule a call on Calendly"
