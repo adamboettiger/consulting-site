@@ -72,7 +72,7 @@ export default function Home() {
           alt="Hero background"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_20%]"
           sizes="100vw"
           quality={90}
         />
